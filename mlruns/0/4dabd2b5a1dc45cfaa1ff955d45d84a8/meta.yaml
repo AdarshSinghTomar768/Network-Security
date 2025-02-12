@@ -1,0 +1,15 @@
+artifact_uri: file:///home/adarsh/Desktop/Network%20Security/mlruns/0/4dabd2b5a1dc45cfaa1ff955d45d84a8/artifacts
+end_time: 1739384625989
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4dabd2b5a1dc45cfaa1ff955d45d84a8
+run_name: nimble-stoat-218
+run_uuid: 4dabd2b5a1dc45cfaa1ff955d45d84a8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739384624318
+status: 3
+tags: []
+user_id: adarsh
