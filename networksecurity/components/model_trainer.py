@@ -14,8 +14,7 @@ from networksecurity.utils.main_utils.utils import save_object,load_object
 from networksecurity.utils.main_utils.utils import load_numpy_array_data,evaluate_models
 from networksecurity.utils.ml_utils.metric.classification_metric import get_classification_score
 
-import mlflow
-from urllib.parse import urlparse
+
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import r2_score
@@ -26,6 +25,10 @@ from sklearn.ensemble import (
     GradientBoostingClassifier,
     RandomForestClassifier,
 )
+import mlflow
+from urllib.parse import urlparse
+import dagshub
+dagshub.init(repo_owner='AdarshSinghTomar768', repo_name='Network-Security', mlflow=True)
 
 
 
@@ -117,7 +120,9 @@ class ModelTrainer:
 
         Network_Model=NetworkModel(preprocessor=preprocessor,model=best_model)
         save_object(self.model_trainer_config.trained_model_file_path,obj=NetworkModel)
+
         #model pusher
+        save_object("final_model/model.pkl",best_model)
 
         
 
